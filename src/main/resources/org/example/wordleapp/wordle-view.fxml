@@ -496,104 +496,52 @@
          <children>
             <HBox alignment="CENTER" spacing="5.0">
                <children>
-                  <Button fx:id="btnQ" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="Q" textFill="WHITE">
+                  <Button fx:id="btnQ" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="Q" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnW" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="W" textFill="WHITE">
+                  <Button fx:id="btnW" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="W" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnE" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="E" textFill="WHITE">
+                  <Button fx:id="btnE" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="E" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnR" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="R" textFill="WHITE">
+                  <Button fx:id="btnR" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="R" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnT" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="T" textFill="WHITE">
+                  <Button fx:id="btnT" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="T" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnY" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="Y" textFill="WHITE">
+                  <Button fx:id="btnY" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="Y" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnU" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="U" textFill="WHITE">
+                  <Button fx:id="btnU" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="U" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnI" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="I" textFill="WHITE">
+                  <Button fx:id="btnI" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="I" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnO" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="O" textFill="WHITE">
+                  <Button fx:id="btnO" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="O" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnP" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="P" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-            </HBox>
-            <HBox alignment="CENTER" spacing="5.0">
-               <children>
-                  <Button fx:id="btnA" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="A" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnS" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="S" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnD" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="D" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnF" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="F" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnG" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="G" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnH" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="H" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnJ" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="J" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnK" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="K" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btnL" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="L" textFill="WHITE">
+                  <Button fx:id="btnP" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="P" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -605,47 +553,99 @@
             </HBox>
             <HBox alignment="CENTER" spacing="5.0">
                <children>
-                  <Button fx:id="btnEnter" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="ENTER" textFill="WHITE">
+                  <Button fx:id="btnA" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="A" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnS" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="S" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnD" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="D" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnF" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="F" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnG" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="G" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnH" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="H" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnJ" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="J" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnK" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="K" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="L" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Button fx:id="btnEnter" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="50.0" styleClass="buttonWordle" text="ENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnZ" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="Z" textFill="WHITE">
+                  <Button fx:id="btnZ" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="Z" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnX" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="X" textFill="WHITE">
+                  <Button fx:id="btnX" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="X" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnC" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="C" textFill="WHITE">
+                  <Button fx:id="btnC" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="C" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnV" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="V" textFill="WHITE">
+                  <Button fx:id="btnV" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="V" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnB" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="B" textFill="WHITE">
+                  <Button fx:id="btnB" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="B" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnN" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="N" textFill="WHITE">
+                  <Button fx:id="btnN" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="N" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnM" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" text="M" textFill="WHITE">
+                  <Button fx:id="btnM" alignment="CENTER" contentDisplay="CENTER" minWidth="30.0" prefHeight="50.0" prefWidth="25.0" styleClass="buttonWordle" text="M" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnClear" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="30.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #aaafb3;" styleClass="buttonWordle" textFill="WHITE">
+                  <Button fx:id="btnClear" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="30.0" prefHeight="50.0" prefWidth="50.0" styleClass="buttonWordle" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>

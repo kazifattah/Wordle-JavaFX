@@ -4,6 +4,7 @@
 
 .button {
     -fx-padding: 0;
+    -fx-background-color:  #aaafb3;
 }
 
 .blankBox {
@@ -62,5 +63,9 @@
     -fx-font-weight: 400;
     -fx-padding: 5px;
     -fx-font-size: 15;
+
+}
+
+.buttonUsed {
 
 }
