@@ -24,6 +24,7 @@ public class WordleApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         stage.setTitle("Wordle");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/wordle-icon.png")));
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
 
