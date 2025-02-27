@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+
+
+.button {
+    -fx-padding: 0;
+}
+
+.blankBox {
+    -fx-background-color: black;
+    -fx-border-color: #787c7f;
+}
+
+.greenBox{
+    -fx-background-color: #6ca965;
+    -fx-border-color: #6ca965;
+}
+
+.yellowBox{
+    -fx-background-color: #c8b653;
+    -fx-border-color: #c8b653;
+
+}
+
+.greyBox{
+    -fx-background-color: #787c7f;
+    -fx-border-color: #787c7f;
+}
+
+.resultMessage {
+    -fx-background-color: #6ca965;
+    -fx-text-fill: green;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-border-color: green;
+}
+
+.resultMessageFailed {
+    -fx-background-color: #ff4545;
+    -fx-text-fill: #9f0000;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-border-color: #9f0000;
+}
+
+.header {
+
+    -fx-font-family:"Crete Round", serif;
+    -fx-font-weight: 400;
+    -fx-padding: 5px;
+    -fx-font-size: 30;
+
+}
+
+.footer {
+
+    -fx-font-family:"Crete Round", serif;
+    -fx-font-weight: 400;
+    -fx-padding: 5px;
+    -fx-font-size: 15;
+
+}
