@@ -16,7 +16,6 @@ import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -345,37 +344,8 @@ public class WordleController {
         btnClear.setOnAction(event -> clearPressed());
 
 
-
-        guess1Letters.put("Letter1", lblGuess1Letter1);
-        guess1Letters.put("Letter2", lblGuess1Letter2);
-        guess1Letters.put("Letter3", lblGuess1Letter3);
-        guess1Letters.put("Letter4", lblGuess1Letter4);
-        guess1Letters.put("Letter5", lblGuess1Letter5);
-        guess2Letters.put("Letter1", lblGuess2Letter1);
-        guess2Letters.put("Letter2", lblGuess2Letter2);
-        guess2Letters.put("Letter3", lblGuess2Letter3);
-        guess2Letters.put("Letter4", lblGuess2Letter4);
-        guess2Letters.put("Letter5", lblGuess2Letter5);
-        guess3Letters.put("Letter1", lblGuess3Letter1);
-        guess3Letters.put("Letter2", lblGuess3Letter2);
-        guess3Letters.put("Letter3", lblGuess3Letter3);
-        guess3Letters.put("Letter4", lblGuess3Letter4);
-        guess3Letters.put("Letter5", lblGuess3Letter5);
-        guess4Letters.put("Letter1", lblGuess4Letter1);
-        guess4Letters.put("Letter2", lblGuess4Letter2);
-        guess4Letters.put("Letter3", lblGuess4Letter3);
-        guess4Letters.put("Letter4", lblGuess4Letter4);
-        guess4Letters.put("Letter5", lblGuess4Letter5);
-        guess5Letters.put("Letter1", lblGuess5Letter1);
-        guess5Letters.put("Letter2", lblGuess5Letter2);
-        guess5Letters.put("Letter3", lblGuess5Letter3);
-        guess5Letters.put("Letter4", lblGuess5Letter4);
-        guess5Letters.put("Letter5", lblGuess5Letter5);
-        guess6Letters.put("Letter1", lblGuess6Letter1);
-        guess6Letters.put("Letter2", lblGuess6Letter2);
-        guess6Letters.put("Letter3", lblGuess6Letter3);
-        guess6Letters.put("Letter4", lblGuess6Letter4);
-        guess6Letters.put("Letter5", lblGuess6Letter5);
+        mapBoxes();
+        mapButtons();
 
         btnEnter.setOnAction(event -> enterPressed());
 
@@ -415,24 +385,27 @@ public class WordleController {
             bindButton(KeyCode.BACK_SPACE, btnClear);
             bindButton(KeyCode.ENTER, btnEnter);
 
-
         });
 
     }
 
+
+
     int index = 0;
     int wordsGuessed = 0;
-    Map<String, Label> guess1Letters = new HashMap<>();
-    Map<String, Label> guess2Letters = new HashMap<>();
-    Map<String, Label> guess3Letters = new HashMap<>();
-    Map<String, Label> guess4Letters = new HashMap<>();
-    Map<String, Label> guess5Letters = new HashMap<>();
-    Map<String, Label> guess6Letters = new HashMap<>();
+    Map<String, Label> row1 = new HashMap<>();
+    Map<String, Label> row2 = new HashMap<>();
+    Map<String, Label> row3 = new HashMap<>();
+    Map<String, Label> row4 = new HashMap<>();
+    Map<String, Label> row5 = new HashMap<>();
+    Map<String, Label> row6 = new HashMap<>();
+    Map<String, Button>buttonMap = new HashMap<>();
 
     final String ANSWER = Answer.setWordleAnswer();
 
     final ArrayList<String> ANSWER_AS_LIST = Answer.stringToLetterArrayList(ANSWER);
     ArrayList<String> GuessWord= new ArrayList<>();
+    ArrayList<String> ButtonsPressed =  new ArrayList<>();
 
 
     private void bindButton(KeyCode key, Button btn) {
@@ -450,6 +423,7 @@ public class WordleController {
     private void enterPressed() {
         if (Answer.checkGuess(GuessWord)) {
             wordsGuessed++;
+            changeButtonColor(GuessWord);
             GuessWord.clear();
             lblResult.setVisible(false);
             lblResult.getStyleClass().clear();
@@ -459,32 +433,32 @@ public class WordleController {
             switch (wordsGuessed) {
                 case 1:
                 {
-                    makeGuess(guess1Letters);
+                    makeGuess(row1);
                     break;
                 }
                 case 2:
                 {
-                    makeGuess(guess2Letters);
+                    makeGuess(row2);
                     break;
                 }
                 case 3:
                 {
-                    makeGuess(guess3Letters);
+                    makeGuess(row3);
                     break;
                 }
                 case 4:
                 {
-                    makeGuess(guess4Letters);
+                    makeGuess(row4);
                     break;
                 }
                 case 5:
                 {
-                    makeGuess(guess5Letters);
+                    makeGuess(row5);
                     break;
                 }
                 case 6:
                 {
-                    makeGuess(guess6Letters);
+                    makeGuess(row6);
                     if(!lblResult.isVisible()) {
                         lblResult.setVisible(true);
                         lblResult.getStyleClass().clear();
@@ -634,27 +608,27 @@ public class WordleController {
         switch(wordsGuessed){
             case 0:
             {
-                activateRowForClear(guess1Letters);
+                activateRowForClear(row1);
                 break;
             }
             case 1: {
-                activateRowForClear(guess2Letters);
+                activateRowForClear(row2);
                 break;
             }
             case 2: {
-                activateRowForClear(guess3Letters);
+                activateRowForClear(row3);
                 break;
             }
             case 3: {
-                activateRowForClear(guess4Letters);
+                activateRowForClear(row4);
                 break;
             }
             case 4: {
-                activateRowForClear(guess5Letters);
+                activateRowForClear(row5);
                 break;
             }
             case 5: {
-                activateRowForClear(guess6Letters);
+                activateRowForClear(row6);
                 break;
             }
         }
@@ -701,28 +675,28 @@ public class WordleController {
 
         switch (wordsGuessed) {
             case 0 : {
-                activateRow(guess1Letters, letterPressed);
+                activateRow(row1, letterPressed);
 
                 break;
             }
             case 1 : {
-                activateRow(guess2Letters, letterPressed);
+                activateRow(row2, letterPressed);
                 break;
             }
             case 2 : {
-                activateRow(guess3Letters, letterPressed);
+                activateRow(row3, letterPressed);
                 break;
             }
             case 3 : {
-                activateRow(guess4Letters, letterPressed);
+                activateRow(row4, letterPressed);
                 break;
             }
             case 4 : {
-                activateRow(guess5Letters, letterPressed);
+                activateRow(row5, letterPressed);
                 break;
             }
             case 5 : {
-                activateRow(guess6Letters, letterPressed);
+                activateRow(row6, letterPressed);
                 break;
             }
         }
@@ -765,6 +739,75 @@ public class WordleController {
                 break;
             }
 
+        }
+    }
+
+    private void mapBoxes() {
+        row1.put("Letter1", lblGuess1Letter1);
+        row1.put("Letter2", lblGuess1Letter2);
+        row1.put("Letter3", lblGuess1Letter3);
+        row1.put("Letter4", lblGuess1Letter4);
+        row1.put("Letter5", lblGuess1Letter5);
+        row2.put("Letter1", lblGuess2Letter1);
+        row2.put("Letter2", lblGuess2Letter2);
+        row2.put("Letter3", lblGuess2Letter3);
+        row2.put("Letter4", lblGuess2Letter4);
+        row2.put("Letter5", lblGuess2Letter5);
+        row3.put("Letter1", lblGuess3Letter1);
+        row3.put("Letter2", lblGuess3Letter2);
+        row3.put("Letter3", lblGuess3Letter3);
+        row3.put("Letter4", lblGuess3Letter4);
+        row3.put("Letter5", lblGuess3Letter5);
+        row4.put("Letter1", lblGuess4Letter1);
+        row4.put("Letter2", lblGuess4Letter2);
+        row4.put("Letter3", lblGuess4Letter3);
+        row4.put("Letter4", lblGuess4Letter4);
+        row4.put("Letter5", lblGuess4Letter5);
+        row5.put("Letter1", lblGuess5Letter1);
+        row5.put("Letter2", lblGuess5Letter2);
+        row5.put("Letter3", lblGuess5Letter3);
+        row5.put("Letter4", lblGuess5Letter4);
+        row5.put("Letter5", lblGuess5Letter5);
+        row6.put("Letter1", lblGuess6Letter1);
+        row6.put("Letter2", lblGuess6Letter2);
+        row6.put("Letter3", lblGuess6Letter3);
+        row6.put("Letter4", lblGuess6Letter4);
+        row6.put("Letter5", lblGuess6Letter5);
+    }
+
+    private void mapButtons() {
+        buttonMap.put("A", btnA);
+        buttonMap.put("B", btnB);
+        buttonMap.put("C", btnC);
+        buttonMap.put("D", btnD);
+        buttonMap.put("E", btnE);
+        buttonMap.put("F", btnF);
+        buttonMap.put("G", btnG);
+        buttonMap.put("H", btnH);
+        buttonMap.put("I", btnI);
+        buttonMap.put("J", btnJ);
+        buttonMap.put("K", btnK);
+        buttonMap.put("L", btnL);
+        buttonMap.put("M", btnM);
+        buttonMap.put("N", btnN);
+        buttonMap.put("O", btnO);
+        buttonMap.put("P", btnP);
+        buttonMap.put("Q", btnQ);
+        buttonMap.put("R", btnR);
+        buttonMap.put("S", btnS);
+        buttonMap.put("T", btnT);
+        buttonMap.put("U", btnU);
+        buttonMap.put("V", btnV);
+        buttonMap.put("W", btnW);
+        buttonMap.put("X", btnX);
+        buttonMap.put("Y", btnY);
+        buttonMap.put("Z", btnZ);
+    }
+
+    private void changeButtonColor(ArrayList<String>buttonsPressed) {
+        for (String button : buttonsPressed) {
+            buttonMap.get(button).getStyleClass().remove("button");
+            buttonMap.get(button).getStyleClass().add("buttonUsed");
         }
     }
 
