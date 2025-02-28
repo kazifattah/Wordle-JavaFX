@@ -24,6 +24,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 
@@ -241,6 +242,9 @@ public class WordleController {
     @FXML
     private VBox vboxApp;
 
+    @FXML
+    private Button btnPlayAgain;
+
 
 
 
@@ -253,6 +257,7 @@ public class WordleController {
         assert btnD != null : "fx:id=\"btnD\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert btnE != null : "fx:id=\"btnE\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert btnEnter != null : "fx:id=\"btnEnter\" was not injected: check your FXML file 'wordle-view.fxml'.";
+        assert btnPlayAgain != null : "fx:id=\"btnPlayAgain\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert btnF != null : "fx:id=\"btnF\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert btnG != null : "fx:id=\"btnG\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert btnH != null : "fx:id=\"btnH\" was not injected: check your FXML file 'wordle-view.fxml'.";
@@ -401,6 +406,23 @@ public class WordleController {
 
         btnLightMode.setOnMouseClicked(event -> setToLightMode());
         btnDarkMode.setOnMouseClicked(event -> setToDarkMode());
+        btnPlayAgain.setDisable(true);
+        btnPlayAgain.setVisible(false);
+
+        btnPlayAgain.setOnMouseClicked(event -> {
+            try {
+                // Close the current stage
+                Stage stage = (Stage) btnPlayAgain.getScene().getWindow();
+                stage.close();
+
+
+                // Create a new instance of your main application
+                new WordleApplication().start(new Stage());  // This will restart the app
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
     }
 
@@ -475,11 +497,7 @@ public class WordleController {
                 {
                     makeGuess(row6);
                     if(!lblResult.isVisible()) {
-                        lblResult.setVisible(true);
-                        lblResult.getStyleClass().clear();
-                        lblResult.getStyleClass().add("resultMessageFailed");
-                        lblResult.setText("Sorry! You ran out of tries!");
-                        hboxAnswer.setVisible(true);
+                        youLost();
                     }
                     break;
                 }
@@ -492,10 +510,13 @@ public class WordleController {
             lblResult.setText("Invalid Word!");
             hideLabelAfterDelay(lblResult);
 
+
         }
 
 
     }
+
+
 
     private void hideLabelAfterDelay(Label label) {
         // Create a PauseTransition that lasts for 2 seconds
@@ -580,13 +601,29 @@ public class WordleController {
 //        }
 
         if (excelsior == 5) {
-            lblResult.setVisible(true);
-            lblResult.getStyleClass().clear();
-            lblResult.getStyleClass().add("resultMessage");
-            lblResult.setText("Congratulations! You guessed correctly!");
-            btnEnter.setDisable(true);
+            youWon();
         }
 
+    }
+
+    private void youWon() {
+        lblResult.setVisible(true);
+        lblResult.getStyleClass().clear();
+        lblResult.getStyleClass().add("resultMessage");
+        lblResult.setText("Congratulations! You guessed correctly!");
+        btnEnter.setDisable(true);
+        btnPlayAgain.setDisable(false);
+        btnPlayAgain.setVisible(true);
+    }
+
+    private void youLost() {
+        lblResult.setVisible(true);
+        lblResult.getStyleClass().clear();
+        lblResult.getStyleClass().add("resultMessageFailed");
+        lblResult.setText("Sorry! You ran out of tries!");
+        hboxAnswer.setVisible(true);
+        btnPlayAgain.setDisable(false);
+        btnPlayAgain.setVisible(true);
     }
 
 //    public static String setColor(Label guessedBox,int index, ArrayList<String> answerWord) {
@@ -837,6 +874,8 @@ public class WordleController {
         lblFooter.getStyleClass().remove("lightMode");
         lblFooter.getStyleClass().add("darkMode");
 
+
+
         if (wordsGuessed<1) {
             row1.forEach((key, value) ->
             {value.getStyleClass().remove("lightMode");
@@ -889,6 +928,7 @@ public class WordleController {
         lblHeader.getStyleClass().add("lightMode");
         lblFooter.getStyleClass().remove("darkMode");
         lblFooter.getStyleClass().add("lightMode");
+
 
 
         if (wordsGuessed<1) {

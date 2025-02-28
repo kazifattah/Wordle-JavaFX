@@ -29,6 +29,14 @@
     -fx-border-radius: 2px;
 }
 
+.button-play-again {
+    -fx-background-color: #6ca965;
+    -fx-border-color: #6ca965;
+    -fx-text-fill: white;
+    -fx-padding:4px;
+    -fx-border-radius: 2px;
+}
+
 
 
 
