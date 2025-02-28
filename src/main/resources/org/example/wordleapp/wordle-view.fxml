@@ -701,7 +701,7 @@
       </VBox>
       <HBox alignment="CENTER" spacing="50.0">
          <children>
-            <ToggleButton fx:id="btnLightMode" mnemonicParsing="false" text="Light Mode">
+            <ToggleButton fx:id="btnLightMode" mnemonicParsing="false" styleClass="toggle-button-light" text="Light Mode">
                <toggleGroup>
                   <ToggleGroup fx:id="modes" />
                </toggleGroup>

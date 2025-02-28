@@ -29,16 +29,9 @@
     -fx-border-radius: 2px;
 }
 
-.toggle-button:selected{
-    -fx-background-color: #787c7f;;
-}
 
-.toggle-button-light:selected{
-    -fx-background-color: #787c7f;
-    -fx-background-radius: 2px;
-    -fx-text-fill: white;
 
-}
+
 
 .blankBox {
 

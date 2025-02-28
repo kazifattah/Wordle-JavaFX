@@ -825,10 +825,8 @@ public class WordleController {
     }
 
     private void setToDarkMode(){
-        btnDarkMode.getStyleClass().remove("toggle-button-light");
-        btnDarkMode.getStyleClass().add("toggle-button");
-        btnLightMode.getStyleClass().remove("toggle-button-light");
-        btnLightMode.getStyleClass().add("toggle-button");
+        btnDarkMode.setSelected(false);
+
 
         vboxApp.getStyleClass().remove("lightMode");
         vboxApp.getStyleClass().add("darkMode");
@@ -880,10 +878,8 @@ public class WordleController {
     }
 
     private void setToLightMode(){
-        btnLightMode.getStyleClass().remove("toggle-button");
-        btnLightMode.getStyleClass().add("toggle-button-light");
-        btnDarkMode.getStyleClass().remove("toggle-button");
-        btnDarkMode.getStyleClass().add("toggle-button-light");
+        btnLightMode.setSelected(false);
+
 
         vboxApp.getStyleClass().remove("darkMode");
         vboxApp.getStyleClass().add("lightMode");
