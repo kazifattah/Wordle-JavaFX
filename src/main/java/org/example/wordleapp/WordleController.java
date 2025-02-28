@@ -356,8 +356,7 @@ public class WordleController {
 
         btnClear.setOnAction(event -> clearPressed());
 
-        btnLightMode.setOnAction(event -> setToLightMode());
-        btnDarkMode.setOnAction(event -> setToDarkMode());
+
 
 
         mapBoxes();
@@ -399,6 +398,9 @@ public class WordleController {
             bindButton(KeyCode.ENTER, btnEnter);
 
         });
+
+        btnLightMode.setOnMouseClicked(event -> setToLightMode());
+        btnDarkMode.setOnMouseClicked(event -> setToDarkMode());
 
     }
 
@@ -825,7 +827,7 @@ public class WordleController {
     }
 
     private void setToDarkMode(){
-        btnDarkMode.setSelected(false);
+
 
 
         vboxApp.getStyleClass().remove("lightMode");
@@ -878,7 +880,7 @@ public class WordleController {
     }
 
     private void setToLightMode(){
-        btnLightMode.setSelected(false);
+
 
 
         vboxApp.getStyleClass().remove("darkMode");
