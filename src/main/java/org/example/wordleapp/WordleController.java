@@ -19,9 +19,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 
@@ -33,8 +35,7 @@ public class WordleController {
     @FXML // URL location of the FXML file that was given to the FXMLLoader
     private URL location;
 
-    @FXML // fx:id="txtAnswer"
-    private TextField txtAnswer; // Value injected by FXMLLoader
+
 
     @FXML // fx:id="hboxAnswer"
     private HBox hboxAnswer; // Value injected by FXMLLoader
@@ -232,7 +233,14 @@ public class WordleController {
 
 
     @FXML // fx:id="lblResult"
-    private Label lblResult; // Value injected by FXMLLoader
+    private Label lblResult, lblHeader, lblFooter; // Value injected by FXMLLoader
+
+    @FXML
+    private ToggleButton btnDarkMode, btnLightMode;
+
+    @FXML
+    private VBox vboxApp;
+
 
 
 
@@ -302,8 +310,13 @@ public class WordleController {
         assert lblAnswer4 != null : "fx:id=\"lblAnswer4\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert lblAnswer5 != null : "fx:id=\"lblAnswer5\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert lblResult != null : "fx:id=\"lblResult\" was not injected: check your FXML file 'wordle-view.fxml'.";
+        assert lblHeader != null : "fx:id=\"lblHeader\" was not injected: check your FXML file 'wordle-view.fxml'.";
+        assert lblFooter != null : "fx:id=\"lblFooter\" was not injected: check your FXML file 'wordle-view.fxml'.";
         assert hboxAnswer != null : "fx:id=\"hboxAnswer\" was not injected: check your FXML file 'wordle-view.fxml'.";
-        assert txtAnswer != null : "fx:id=\"txtAnswer\" was not injected: check your FXML file 'wordle-view.fxml'.";
+        assert btnDarkMode != null : "fx:id=\"btnDarkMode\" was not injected: check your FXML file 'wordle-view.fxml'.";
+        assert btnLightMode != null : "fx:id=\"btnLightMode\" was not injected: check your FXML file 'wordle-view.fxml'.";
+        assert vboxApp != null : "fx:id=\"vboxApp\" was not injected: check your FXML file 'wordle-view.fxml'.";
+
 
 
 
@@ -343,14 +356,14 @@ public class WordleController {
 
         btnClear.setOnAction(event -> clearPressed());
 
+        btnLightMode.setOnAction(event -> setToLightMode());
+        btnDarkMode.setOnAction(event -> setToDarkMode());
+
 
         mapBoxes();
         mapButtons();
 
         btnEnter.setOnAction(event -> enterPressed());
-
-        txtAnswer.setText(ANSWER);
-        txtAnswer.setVisible(false);
 
         hboxAnswer.setVisible(false);
         lblResult.setVisible(false);
@@ -587,19 +600,19 @@ public class WordleController {
 //    }
 
     private void turnGreen(Label guessedBox) {
-        guessedBox.getStyleClass().remove("blankBox");
+        guessedBox.getStyleClass().clear();
         guessedBox.getStyleClass().add("greenBox");
 
     }
 
     private void turnYellow(Label guessedBox) {
-        guessedBox.getStyleClass().remove("blankBox");
+        guessedBox.getStyleClass().clear();
         guessedBox.getStyleClass().add("yellowBox");
 
     }
 
     private void turnGrey(Label guessedBox) {
-        guessedBox.getStyleClass().remove("blankBox");
+        guessedBox.getStyleClass().clear();
         guessedBox.getStyleClass().add("greyBox");
 
     }
@@ -810,5 +823,114 @@ public class WordleController {
             buttonMap.get(button).getStyleClass().add("buttonUsed");
         }
     }
+
+    private void setToDarkMode(){
+        btnDarkMode.getStyleClass().remove("toggle-button-light");
+        btnDarkMode.getStyleClass().add("toggle-button");
+        btnLightMode.getStyleClass().remove("toggle-button-light");
+        btnLightMode.getStyleClass().add("toggle-button");
+
+        vboxApp.getStyleClass().remove("lightMode");
+        vboxApp.getStyleClass().add("darkMode");
+        lblHeader.getStyleClass().remove("lightMode");
+        lblHeader.getStyleClass().add("darkMode");
+        lblFooter.getStyleClass().remove("lightMode");
+        lblFooter.getStyleClass().add("darkMode");
+
+        if (wordsGuessed<1) {
+            row1.forEach((key, value) ->
+            {value.getStyleClass().remove("lightMode");
+                value.getStyleClass().add("darkMode");});
+        }
+
+        if (wordsGuessed<2) {
+            row2.forEach((key, value) ->
+            {value.getStyleClass().remove("lightMode");
+                value.getStyleClass().add("darkMode");});
+        }
+
+        if (wordsGuessed<3) {
+            row3.forEach((key, value) ->
+            {value.getStyleClass().remove("lightMode");
+                value.getStyleClass().add("darkMode");});
+        }
+
+        if (wordsGuessed<4) {
+            row4.forEach((key, value) ->
+            {value.getStyleClass().remove("lightMode");
+                value.getStyleClass().add("darkMode");});
+        }
+
+        if (wordsGuessed<5) {
+            row5.forEach((key, value) ->
+            {value.getStyleClass().remove("lightMode");
+                value.getStyleClass().add("darkMode");});
+        }
+
+        if (wordsGuessed<6) {
+            row6.forEach((key, value) ->
+            {value.getStyleClass().remove("lightMode");
+                value.getStyleClass().add("darkMode");});
+        }
+
+
+
+
+
+    }
+
+    private void setToLightMode(){
+        btnLightMode.getStyleClass().remove("toggle-button");
+        btnLightMode.getStyleClass().add("toggle-button-light");
+        btnDarkMode.getStyleClass().remove("toggle-button");
+        btnDarkMode.getStyleClass().add("toggle-button-light");
+
+        vboxApp.getStyleClass().remove("darkMode");
+        vboxApp.getStyleClass().add("lightMode");
+        lblHeader.getStyleClass().remove("darkMode");
+        lblHeader.getStyleClass().add("lightMode");
+        lblFooter.getStyleClass().remove("darkMode");
+        lblFooter.getStyleClass().add("lightMode");
+
+
+        if (wordsGuessed<1) {
+            row1.forEach((key, value) ->
+            {value.getStyleClass().remove("darkMode");
+                value.getStyleClass().add("lightMode");});
+        }
+
+        if (wordsGuessed<2) {
+            row2.forEach((key, value) ->
+            {value.getStyleClass().remove("darkMode");
+                value.getStyleClass().add("lightMode");});
+        }
+
+        if (wordsGuessed<3) {
+            row3.forEach((key, value) ->
+            {value.getStyleClass().remove("darkMode");
+                value.getStyleClass().add("lightMode");});
+        }
+
+        if (wordsGuessed<4) {
+            row4.forEach((key, value) ->
+            {value.getStyleClass().remove("darkMode");
+                value.getStyleClass().add("lightMode");});
+        }
+
+        if (wordsGuessed<5) {
+            row5.forEach((key, value) ->
+            {value.getStyleClass().remove("darkMode");
+                value.getStyleClass().add("lightMode");});
+        }
+
+        if (wordsGuessed<6) {
+            row6.forEach((key, value) ->
+            {value.getStyleClass().remove("darkMode");
+                value.getStyleClass().add("lightMode");});
+        }
+
+
+    }
+
 
 }

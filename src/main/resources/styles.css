@@ -2,31 +2,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
 
 
+
+
 .button {
     -fx-padding: 0;
     -fx-background-color:  #aaafb3;
     -fx-background-radius: 3px;
 }
 
-.blankBox {
+.toggle-button {
     -fx-background-color: black;
     -fx-border-color: #787c7f;
+    -fx-text-fill: white;
+    -fx-padding:4px;
+    -fx-border-radius: 2px;
+
 }
+
+
+
+.toggle-button-light {
+    -fx-background-color: white;
+    -fx-border-color: #787c7f;
+    -fx-text-fill: black;
+    -fx-padding:4px;
+    -fx-border-radius: 2px;
+}
+
+.toggle-button:selected{
+    -fx-background-color: #787c7f;;
+}
+
+.toggle-button-light:selected{
+    -fx-background-color: #787c7f;
+    -fx-background-radius: 2px;
+    -fx-text-fill: white;
+
+}
+
+.blankBox {
+
+    -fx-border-color: #787c7f;
+}
+
+
 
 .greenBox{
     -fx-background-color: #6ca965;
     -fx-border-color: #6ca965;
+    -fx-text-fill: white;
 }
 
 .yellowBox{
     -fx-background-color: #c8b653;
     -fx-border-color: #c8b653;
+    -fx-text-fill: white;
 
 }
 
 .greyBox{
     -fx-background-color: #787c7f;
     -fx-border-color: #787c7f;
+    -fx-text-fill: white;
 }
 
 .resultMessage {
@@ -56,7 +93,10 @@
     -fx-padding: 5px;
     -fx-font-size: 30;
 
+
 }
+
+
 
 .footer {
 
@@ -65,11 +105,24 @@
     -fx-padding: 5px;
     -fx-font-size: 15;
 
+
 }
+
+
 
 .buttonUsed {
     -fx-padding: 0;
     -fx-background-color:  #787c7f;
     -fx-background-radius: 3px;
 
+}
+
+.lightMode {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.darkMode {
+    -fx-background-color: black;
+    -fx-text-fill: white;
 }
